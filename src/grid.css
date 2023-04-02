@@ -1,0 +1,86 @@
+.space {
+    height: 65vh;
+    width: 73vw;
+
+    max-width: 1450px;
+    max-height: 900px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #72c7ed;
+    z-index: 0;
+    border: solid rgba(255, 255, 255, 0.6) 2px;
+}
+
+.angry-grid {
+    display: grid; 
+ 
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 46% 46% 8%;
+    gap: 0px;
+
+    height: 61vh;
+    width: 70vw;
+    max-width: 1400px;
+    max-height: 800px;
+
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ }
+   
+ #item-0 {
+ 
+    /* From https://css.glass */
+    background: rgba(255, 252, 252, 0.7);
+    /* border-radius: 16px 0 0 0; */
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(9.4px);
+    -webkit-backdrop-filter: blur(9.4px);
+    border: 1px solid rgba(255, 200, 175, 0.24);
+    grid-row-start: 1;
+    grid-column-start: 1;
+ 
+    grid-row-end: 2;
+    grid-column-end: 3;
+    
+ }
+ #item-1 {
+ 
+    background-color: #86FAD6; 
+    grid-row-start: 1;
+    grid-column-start: 3;
+ 
+    grid-row-end: 3;
+    grid-column-end: 4;
+    
+ }
+ #item-2 {
+ 
+    background-color: #ED1849; 
+    grid-row-start: 2;
+    grid-column-start: 1;
+ 
+    grid-row-end: 3;
+    grid-column-end: 2;
+
+    
+    
+ }
+
+ #item-3 {
+
+    background-color: white; 
+    grid-row-start: 2;
+    grid-column-start: 2;
+ 
+    grid-row-end: 3;
+    grid-column-end: 3;
+    
+ }

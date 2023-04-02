@@ -8,16 +8,29 @@
   </head>
   <body>
     <div id="app">
+      
+        <div class="angry-grid">
+          <div id="item-0">&nbsp;</div>
+          <div id="item-1">&nbsp;</div>
+          <div id="item-2">&nbsp;
+            <img class="profile-img" src="assets/img/profil-1.jpg" alt="">
+          </div>
+          <div id="item-3">&nbsp;</div>
+        </div>
+
         <svg viewBox="0 0 200 200">
-        <defs>
-          <linearGradient id="gradient" gradientTransform="rotate(90)">
-            <stop id="gradientStop1" offset="0%" stop-color="var(--startColor)" />
-            <stop id="gradientStop2 " offset="100%" stop-color="var(--stopColor)" />
-          </linearGradient>
-        </defs>
-        <path d="" fill="url('#gradient')"></path>
-      </svg>
+          <defs>
+            <linearGradient id="gradient" gradientTransform="rotate(90)">
+              <stop id="gradientStop1" offset="0%" stop-color="var(--startColor)" />
+              <stop id="gradientStop2 " offset="100%" stop-color="var(--stopColor)" />
+            </linearGradient>
+          </defs>
+          <path d="" fill="url('#gradient')"></path>
+        </svg>
+
+        <div class="space"></div>
+
     </div>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/blob.ts"></script>
   </body>
 </html>
