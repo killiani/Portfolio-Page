@@ -8,7 +8,7 @@ const path = document.querySelector("path");
 const root = document.documentElement;
 
 let hueNoiseOffset = 0;
-let noiseStep = 0.005;
+let noiseStep = 0.001;
 
 const simplex = new SimplexNoise();
 
@@ -40,9 +40,13 @@ const points = createPoints();
   const hueNoise = noise(hueNoiseOffset, hueNoiseOffset);
   const hue = map(hueNoise, -1, 1, 0, 360);
 
-  root.style.setProperty("--startColor", `hsl(${hue}, 100%, 75%)`);
-  root.style.setProperty("--stopColor", `hsl(${hue + 60}, 100%, 75%)`);
-  document.body.style.background = `hsl(${hue + 60}, 75%, 5%)`;
+  // Background adjustments
+  // root.style.setProperty("--startColor", `hsl(${hue}, 100%, 75%)`);
+  // root.style.setProperty("--stopColor", `hsl(${hue + 60}, 100%, 75%)`);
+  root.style.setProperty("--startColor", `rgb(245,166,125)`);
+  root.style.setProperty("--stopColor", `rgb(245,166,125)`);
+  // console.log('hue' + hue);
+  // document.body.style.background = `hsl(${hue + 60}, 75%, 5%)`;
 
   hueNoiseOffset += noiseStep / 6;
 
@@ -60,18 +64,18 @@ function noise(x, y) {
 function createPoints() {
   const points = [];
   // how many points do we need
-  const numPoints = 6;
+  const numPoints = 8;
   // used to equally space each point around the circle
   const angleStep = (Math.PI * 2) / numPoints;
   // the radius of the circle
-  const rad = 75;
+  const rad = 40;
 
   for (let i = 1; i <= numPoints; i++) {
     // x & y coordinates of the current point
     const theta = i * angleStep;
 
-    const x = 100 + Math.cos(theta) * rad;
-    const y = 100 + Math.sin(theta) * rad;
+    const x = 100 + Math.cos(theta) * rad * 4.5; // stretch horizontat
+    const y = 100 + Math.sin(theta) * rad; 
 
     // store the point's position
     points.push({
