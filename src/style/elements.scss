@@ -1,0 +1,48 @@
+html {
+    font-family: 'SF UI Text Regular'
+}
+
+h1 {
+    margin: 0 0 0 20px;
+    font-family: 'SF UI Text Heavy';
+    font-size: 39px;
+
+    // background: linear-gradient(355deg, rgba(114,199,237,1) 0%, rgba(134,250,214,1) 79%);
+    background: linear-gradient(355deg, rgba(245,199,237,1) 0%, rgba(134,250,214,1) 79%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 32px;
+    height: 75px;
+}
+
+.profile-img  {
+    width: 42%;
+    object-fit: contain;
+}
+
+// Nav
+#item-1 {
+    display: flex;
+    justify-content: center;
+    ul {
+        writing-mode: vertical-rl;
+        display: flex;
+        list-style: none;
+        justify-content: space-evenly;
+        height: 100%;
+        li {
+            a {
+                font-family: 'SF UI Text Bold';
+                font-size: 20px;
+                padding: 50px;
+                text-decoration: none;
+                color: black;
+                transition: 0.3s;
+            }
+            a:hover {
+                color: white;
+                transition: 0.3s;
+            }
+        }
+    }
+}
