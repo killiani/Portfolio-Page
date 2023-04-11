@@ -24,11 +24,13 @@ h1 {
 #item-1 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     ul {
         writing-mode: vertical-rl;
         display: flex;
         list-style: none;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        align-items: center;
         height: 100%;
         li {
             a {
@@ -44,5 +46,14 @@ h1 {
                 transition: 0.3s;
             }
         }
+    }
+}
+
+.github {
+    display: flex;
+    justify-content: center;
+    img {
+        width: 30px;
+        margin: 0 0 50px 0;
     }
 }
